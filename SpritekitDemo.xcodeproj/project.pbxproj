@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		E8D0F1F62544214800BEC927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F52544214800BEC927 /* AppDelegate.swift */; };
 		E8D0F1F82544214800BEC927 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F72544214800BEC927 /* SceneDelegate.swift */; };
-		E8D0F1FA2544214800BEC927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F92544214800BEC927 /* ViewController.swift */; };
+		E8D0F1FA2544214800BEC927 /* SpriteKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F92544214800BEC927 /* SpriteKitVC.swift */; };
 		E8D0F1FD2544214800BEC927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F1FB2544214800BEC927 /* Main.storyboard */; };
 		E8D0F1FF2544214A00BEC927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F1FE2544214A00BEC927 /* Assets.xcassets */; };
 		E8D0F2022544214A00BEC927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F2002544214A00BEC927 /* LaunchScreen.storyboard */; };
 		E8D0F20D2544214A00BEC927 /* SpritekitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F20C2544214A00BEC927 /* SpritekitDemoTests.swift */; };
 		E8D0F2182544214A00BEC927 /* SpritekitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F2172544214A00BEC927 /* SpritekitDemoUITests.swift */; };
+		E8D0F22F254427A500BEC927 /* MetalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F22E254427A500BEC927 /* MetalVC.swift */; };
+		E8D0F23C254538CE00BEC927 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F23B254538CE00BEC927 /* MyParticle.sks */; };
+		E8D0F244254538F000BEC927 /* MyParticle01.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F243254538F000BEC927 /* MyParticle01.sks */; };
+		E8D0F2492545390400BEC927 /* MyParticle02.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F2482545390400BEC927 /* MyParticle02.sks */; };
+		E8D0F24E2545391200BEC927 /* MyParticle03.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F24D2545391200BEC927 /* MyParticle03.sks */; };
+		E8D0F2532545391F00BEC927 /* MyParticle04.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F2522545391F00BEC927 /* MyParticle04.sks */; };
+		E8D0F2582545393300BEC927 /* MyParticle05.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F2572545393300BEC927 /* MyParticle05.sks */; };
+		E8D0F25D2545393F00BEC927 /* MyParticle06.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F25C2545393F00BEC927 /* MyParticle06.sks */; };
+		E8D0F2622545394C00BEC927 /* MyParticle07.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8D0F2612545394C00BEC927 /* MyParticle07.sks */; };
+		E8D0F269254543BD00BEC927 /* SpriteKitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F268254543BD00BEC927 /* SpriteKitNode.swift */; };
+		E8D0F26E254543CD00BEC927 /* SKShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F26D254543CD00BEC927 /* SKShapeNode.swift */; };
+		E8D0F273254543EB00BEC927 /* SKParticleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F272254543EB00BEC927 /* SKParticleNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +50,7 @@
 		E8D0F1F22544214800BEC927 /* SpritekitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpritekitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D0F1F52544214800BEC927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D0F1F72544214800BEC927 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E8D0F1F92544214800BEC927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8D0F1F92544214800BEC927 /* SpriteKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitVC.swift; sourceTree = "<group>"; };
 		E8D0F1FC2544214800BEC927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8D0F1FE2544214A00BEC927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D0F2012544214A00BEC927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,18 @@
 		E8D0F2132544214A00BEC927 /* SpritekitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpritekitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D0F2172544214A00BEC927 /* SpritekitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritekitDemoUITests.swift; sourceTree = "<group>"; };
 		E8D0F2192544214A00BEC927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D0F22E254427A500BEC927 /* MetalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVC.swift; sourceTree = "<group>"; };
+		E8D0F23B254538CE00BEC927 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		E8D0F243254538F000BEC927 /* MyParticle01.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle01.sks; sourceTree = "<group>"; };
+		E8D0F2482545390400BEC927 /* MyParticle02.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle02.sks; sourceTree = "<group>"; };
+		E8D0F24D2545391200BEC927 /* MyParticle03.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle03.sks; sourceTree = "<group>"; };
+		E8D0F2522545391F00BEC927 /* MyParticle04.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle04.sks; sourceTree = "<group>"; };
+		E8D0F2572545393300BEC927 /* MyParticle05.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle05.sks; sourceTree = "<group>"; };
+		E8D0F25C2545393F00BEC927 /* MyParticle06.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle06.sks; sourceTree = "<group>"; };
+		E8D0F2612545394C00BEC927 /* MyParticle07.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle07.sks; sourceTree = "<group>"; };
+		E8D0F268254543BD00BEC927 /* SpriteKitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitNode.swift; sourceTree = "<group>"; };
+		E8D0F26D254543CD00BEC927 /* SKShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKShapeNode.swift; sourceTree = "<group>"; };
+		E8D0F272254543EB00BEC927 /* SKParticleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKParticleNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +123,22 @@
 		E8D0F1F42544214800BEC927 /* SpritekitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E8D0F2672545437F00BEC927 /* SceneNode */,
+				E8D0F2662545437600BEC927 /* VC */,
 				E8D0F1F52544214800BEC927 /* AppDelegate.swift */,
 				E8D0F1F72544214800BEC927 /* SceneDelegate.swift */,
-				E8D0F1F92544214800BEC927 /* ViewController.swift */,
 				E8D0F1FB2544214800BEC927 /* Main.storyboard */,
 				E8D0F1FE2544214A00BEC927 /* Assets.xcassets */,
 				E8D0F2002544214A00BEC927 /* LaunchScreen.storyboard */,
 				E8D0F2032544214A00BEC927 /* Info.plist */,
+				E8D0F23B254538CE00BEC927 /* MyParticle.sks */,
+				E8D0F243254538F000BEC927 /* MyParticle01.sks */,
+				E8D0F2482545390400BEC927 /* MyParticle02.sks */,
+				E8D0F24D2545391200BEC927 /* MyParticle03.sks */,
+				E8D0F2522545391F00BEC927 /* MyParticle04.sks */,
+				E8D0F2572545393300BEC927 /* MyParticle05.sks */,
+				E8D0F25C2545393F00BEC927 /* MyParticle06.sks */,
+				E8D0F2612545394C00BEC927 /* MyParticle07.sks */,
 			);
 			path = SpritekitDemo;
 			sourceTree = "<group>";
@@ -126,6 +159,25 @@
 				E8D0F2192544214A00BEC927 /* Info.plist */,
 			);
 			path = SpritekitDemoUITests;
+			sourceTree = "<group>";
+		};
+		E8D0F2662545437600BEC927 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				E8D0F1F92544214800BEC927 /* SpriteKitVC.swift */,
+				E8D0F22E254427A500BEC927 /* MetalVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		E8D0F2672545437F00BEC927 /* SceneNode */ = {
+			isa = PBXGroup;
+			children = (
+				E8D0F268254543BD00BEC927 /* SpriteKitNode.swift */,
+				E8D0F26D254543CD00BEC927 /* SKShapeNode.swift */,
+				E8D0F272254543EB00BEC927 /* SKParticleNode.swift */,
+			);
+			path = SceneNode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +285,15 @@
 			files = (
 				E8D0F2022544214A00BEC927 /* LaunchScreen.storyboard in Resources */,
 				E8D0F1FF2544214A00BEC927 /* Assets.xcassets in Resources */,
+				E8D0F24E2545391200BEC927 /* MyParticle03.sks in Resources */,
+				E8D0F244254538F000BEC927 /* MyParticle01.sks in Resources */,
 				E8D0F1FD2544214800BEC927 /* Main.storyboard in Resources */,
+				E8D0F2582545393300BEC927 /* MyParticle05.sks in Resources */,
+				E8D0F2532545391F00BEC927 /* MyParticle04.sks in Resources */,
+				E8D0F25D2545393F00BEC927 /* MyParticle06.sks in Resources */,
+				E8D0F23C254538CE00BEC927 /* MyParticle.sks in Resources */,
+				E8D0F2492545390400BEC927 /* MyParticle02.sks in Resources */,
+				E8D0F2622545394C00BEC927 /* MyParticle07.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D0F1FA2544214800BEC927 /* ViewController.swift in Sources */,
+				E8D0F22F254427A500BEC927 /* MetalVC.swift in Sources */,
+				E8D0F26E254543CD00BEC927 /* SKShapeNode.swift in Sources */,
+				E8D0F1FA2544214800BEC927 /* SpriteKitVC.swift in Sources */,
+				E8D0F269254543BD00BEC927 /* SpriteKitNode.swift in Sources */,
 				E8D0F1F62544214800BEC927 /* AppDelegate.swift in Sources */,
 				E8D0F1F82544214800BEC927 /* SceneDelegate.swift in Sources */,
+				E8D0F273254543EB00BEC927 /* SKParticleNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N24P72S89;
 				INFOPLIST_FILE = SpritekitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N24P72S89;
 				INFOPLIST_FILE = SpritekitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
