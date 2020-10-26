@@ -29,7 +29,9 @@ class SpriteKitVC: UIViewController {
         // 2.显示形状
 //         showShape()
         // 2. 显示粒子
-        showParticles()
+//        showParticles()
+        // 2. 显示文本
+         showTextNode()
         
         // 3.场景中呈现精灵
         if let skView = sceneView as? SKView {
@@ -230,6 +232,7 @@ class SpriteKitVC: UIViewController {
         /// 1.创建.sks文件到工程
         /// 2.代码配置 粒子
          /// let newMakeEmitter = SKEmitterNode(fileNamed: "MyParticle01.sks")!
+        /// 采用编辑器 https://help.apple.com/xcode/mac/current/#/dev0bfaf1ab7
         // 3.修改属性
         
         // 3.1 选择场景中的哪个节点发出粒子
@@ -455,5 +458,130 @@ class SpriteKitVC: UIViewController {
     }
     
     lazy var newMakeEmitter = SKEmitterNode(fileNamed: "MyParticle01.sks")!
+    
+    
+    
+    /// MARK : - 显示文本 (https://developer.apple.com/documentation/spritekit/nodes_for_scene_building)
+    
+    func showTextNode() {
+        
+        // 向场景添加文本 （https://developer.apple.com/documentation/spritekit/sklabelnode/adding_text_to_a_scene）
+        // 使用标签节点在场景中绘制文本，例如运行状况指示器或“游戏结束”横幅。
+        // 1 创建标签
+        /// 1.1使用指定的字体初始化新的标签对象。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519917-init)
+//         let winner = SKLabelNode(fontNamed: "Chalkduster")
+//        winner.text = "You Win!"
+//        winner.fontSize = 65
+//        winner.fontColor = SKColor.green
+//        winner.position = CGPoint(x:sceneView.frame.minX,y:sceneView.frame.minY)
+//        winner.verticalAlignmentMode = .baseline
+//        mainScene.addChild(winner)
+        // 每当您更改标签节点的属性时，标签节点将在下一次渲染场景时自动更新。
+        ///
+    
+        /// 1.2 使用文本字符串初始化新的标签对象 (https://developer.apple.com/documentation/spritekit/sklabelnode/1519917-init)
+//        let winner = SKLabelNode(text: "You Win！")
+//        winner.fontSize = 65
+//        winner.fontColor = SKColor.green
+//        winner.position = CGPoint(x: sceneView.frame.minX, y: sceneView.frame.minY)
+//        mainScene.addChild(winner)
+        ///
+        
+        /// 1.3 使用属性文本字符串初始化新的标签对象。(https://developer.apple.com/documentation/spritekit/sklabelnode/2865816-attributedtext)
+//        let winner = SKLabelNode(attributedText:NSAttributedString(string: "You Win!",
+//                                                                   attributes:
+//                                                                    [NSAttributedString.Key.font:UIFont.fontNames(forFamilyName: "Chalkduster"),
+//                                                                    NSAttributedString.Key.foregroundColor:SKColor.red]))
+//        winner.fontSize = 65
+//        winner.position = CGPoint(x: sceneView.frame.minX, y: sceneView.frame.minY)
+//        mainScene.addChild(winner)
+        ///
+        
+        // 2. 设置标签的文字
+        /// 2.1 标签的颜色。(https://developer.apple.com/documentation/spritekit/sklabelnode/1520057-fontcolor)
+        /// fontColor
+        /// 2.2 标签中文本所使用的字体。(https://developer.apple.com/documentation/spritekit/sklabelnode/1520129-fontname)
+        /// fontName
+        /// 2.3 标签中使用的字体大小。(https://developer.apple.com/documentation/spritekit/sklabelnode/1520208-fontsize)
+        /// fontSize
+        
+        // 3. 控制标签的对齐方式
+        /// 3.1 文本在节点内的垂直位置。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519933-verticalalignmentmode)
+//         let winner = SKLabelNode(fileNamed: "Chalkduster")
+//        winner.text = "You Win!"
+//        winner.fontSize = 65
+//        winner.fontColor = SKColor.green
+//        winner.position = CGPoint(x: sceneView.frame.minX, y: sceneView.frame.minY)
+////        winner.verticalAlignmentMode = .baseline
+//        mainScene.addChild(winner)
+        ///
+        
+        /// 3.2  垂直对齐文本的选项。(https://developer.apple.com/documentation/spritekit/sklabelverticalalignmentmode)
+ //        let winner1 = SKLabelNode(fontNamed: "Chalkduster")
+//        winner1.verticalAlignmentMode = .baseline // 放置文本，使字体的基线位于节点的原点上。
+//        winner1.verticalAlignmentMode = .center // 将文本垂直居中于节点的原点上。
+//        winner1.verticalAlignmentMode = .top // 放置文本，使文本的顶部位于节点的原点上。
+//        winner1.verticalAlignmentMode = .bottom // 放置文本，使文本的底部位于节点的原点上。
+        
+ //       winner1.text = "baseline"
+ //       mainScene.addChild(winner1)
+        ///
+        /// 3.3 文本在节点内的水平位置。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519711-horizontalalignmentmode)
+ //       let winner2 = SKLabelNode(fontNamed: "Chalkduster")
+//        winner2.horizontalAlignmentMode = .left // 放置文本，以使文本的左侧位于节点的原点上。
+//        winner2.horizontalAlignmentMode = .center // 将文本水平居中于节点的原点上。
+//        winner2.horizontalAlignmentMode = .right // 放置文本，以使文本的右侧位于节点的原点上。
+ //       winner2.text = "left"
+ //       mainScene.addChild(winner2)
+        ///
+        
+        // 4 定义标签的换行行为 配置这些属性以控制换行行为
+        /// 4.1 宽度（以屏幕点为单位），之后应应用换行模式。（https://developer.apple.com/documentation/spritekit/sklabelnode/2865814-preferredmaxlayoutwidth）
+        /// 默认值为0，这意味着将不应用换行模式。
+//         let winner = SKLabelNode(fontNamed: "Chalkduster")
+//          winner.preferredMaxLayoutWidth = 10
+//        winner.text = "You Win！"
+//        mainScene.addChild(winner)
+        ///
+    
+        /// 4.2 确定多行的换行模式。（https://developer.apple.com/documentation/spritekit/sklabelnode/2865818-linebreakmode）
+//        let winner = SKLabelNode(fontNamed: "Chalkduster")
+//        winner.lineBreakMode = .byCharWrapping
+//        winner.text = "You Win!"
+//        mainScene.addChild(winner)
+        
+        /// 4.3 确定要绘制的线数。默认值为1（一行）。
+        /// 值0解释为行数不受限制。
+        /// 如果文本的高度达到行数，则将使用换行模式将文本截断。(https://developer.apple.com/documentation/spritekit/sklabelnode/2865815-numberoflines)
+//        let winner = SKLabelNode(fontNamed: "Chalkduster")
+//        winner.lineBreakMode = .byClipping
+//        winner.text = "You Win!"
+//        winner.numberOfLines = 2
+//        mainScene.addChild(winner)
+        ///
+    
+        /// 5. 给标签着色
+        /// 5.1 可以用于动画的字体颜色的替代方法。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519938-color)
+//        let winner = SKLabelNode(fontNamed: "Chalkduster")
+//        winner.color = SKColor.blue
+//        winner.text = "You Win!"
+//        mainScene.addChild(winner)
+        ///
+        
+        // 6. 一个浮点值，描述颜色如何与字体颜色混合。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519724-colorblendfactor)
+        // 该值必须是介于0.0和1.0之间（含）的数字。默认值（）表示color属性将被忽略，
+        // 标签的字体颜色应保持不变。对于大于的值，将字体颜色与混合颜色混合，最大值为1.0则确定字体颜色为混合颜色的100%
+//        let winner = SKLabelNode(fontNamed: "Chalkduster")
+//        winner.colorBlendFactor = 0.8
+//        winner.text = "You Win!"
+//        mainScene.addChild(winner)
+        
+        // 7 . 配置Alpha混合
+        // 更改标签使用Alpha值（例如加法混合）的方式，导致标签比以前更亮。
+        // 混合模式用于将标签绘制到父级的帧缓冲区中。(https://developer.apple.com/documentation/spritekit/sklabelnode/1519598-blendmode)
+        let winner = SKLabelNode(text: "You Win!")//SKLabelNode(fontNamed: "Chalkduster")
+        winner.blendMode = .add
+        mainScene.addChild(winner)
+    }
 }
 
