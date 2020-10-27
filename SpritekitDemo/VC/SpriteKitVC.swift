@@ -7,6 +7,7 @@
 
 import UIKit
 import SpriteKit
+import SceneKit
 
 // 绘制节点 https://developer.apple.com/documentation/spritekit/nodes_for_scene_building#2242745
 // 显示图像，形状，粒子，文本，视频，图块，甚至3D内容
@@ -31,7 +32,13 @@ class SpriteKitVC: UIViewController {
         // 2. 显示粒子
 //        showParticles()
         // 2. 显示文本
-         showTextNode()
+//         showTextNode()
+        // 2. 显示视频
+//        showVideoNode()
+        // 2. 显示图块
+//        showPicTextureNode()
+        // 2. 显示3D内容
+         show3DNode()
         
         // 3.场景中呈现精灵
         if let skView = sceneView as? SKView {
@@ -582,6 +589,138 @@ class SpriteKitVC: UIViewController {
         let winner = SKLabelNode(text: "You Win!")//SKLabelNode(fontNamed: "Chalkduster")
         winner.blendMode = .add
         mainScene.addChild(winner)
+    }
+    
+    // MARK : - 展示视频元素 (https://developer.apple.com/documentation/spritekit/skvideonode)
+    func showVideoNode() {
+        let videNode = SKVideoNode(fileNamed: "5b4d58fade11d.mp4")
+        videNode.position = CGPoint(x: sceneView.frame.minX, y: sceneView.frame.minY)
+        videNode.size = CGSize(width: 200, height: 100)
+        mainScene.addChild(videNode)
+        videNode.play()
+        
+       // 1. 通过添加视频节点在场景中播放视频。(https://developer.apple.com/documentation/spritekit/skvideonode/adding_a_video_to_a_scene)
+        /// 视频节点仅提供该类可用功能的子集。以下是视频节点的相关限制
+        /// 1.1 视频节点始终按比例缩放。
+        /// 1.2 视频节点无法着色。但是，可以将其作为的子级添加，以添加用于色彩处理和其他效果的Core Image滤镜。SKEffectNode
+        /// 1.3 视频节点始终使用Alpha混合模式。
+        /// 1.4 视频节点不能使用自定义着色器或照明。
+        /// 创建视频节点后，其size属性将初始化为视频内容的基本大小，但是您可以更改它。视频内容将自动拉伸到新的大小。与Sprite节点一样，该属性定义相对于节点位置显示内容的位置。anchorPoint
+    }
+    
+    // Mark: - 添加图块
+    
+    func showPicTextureNode() {
+        // 图像的二维数组。(https://developer.apple.com/documentation/spritekit/sktilemapnode)
+        // SKTileMapNode可以在任何大小的网格中布置预定义的图块。通常，与在代码中配置平铺图相比，您可以在Xcode的SpriteKit场景编辑器中配置9切片图像（平铺组），并提前绘制平铺图的外观。
+        // 与Sprite节点一样，您可以使用不同的混合模式对平铺贴图进行分层，也可以使用动作和物理方法对其进行控制，
+        // 例如，以实现视差滚动。渲染后的图块地图可以使用进行后期处理，SKShader以添加效果，例如运动模糊或大气透视。
+        // 1. 以编程方式创建平铺地图 (https://developer.apple.com/documentation/spritekit/sktilemapnode/creating_a_tile_map_programmatically)
+        /// 1.1 使用提供的带有指定列数和行数的图块集创建和初始化图块地图节点。
+        let tileGroupRule = SKTileGroupRule()
+        let group = SKTileGroup(rules: [tileGroupRule])
+        let tileSet = SKTileSet(tileGroups: [group])
+        let tileMapNode = SKTileMapNode(tileSet: tileSet, columns: 4, rows: 4, tileSize: CGSize(width: 40, height: 40))
+        mainScene.addChild(tileMapNode)
+        
+        
+        ///1.2使用提供的带有指定列数和行数的图块集创建和初始化图块地图节点。(https://developer.apple.com/documentation/spritekit/sktilemapnode/creating_a_tile_map_programmatically)
+        let tileSet2 = SKTileSet(named: "")!
+        let texture = SKTexture(imageNamed: "")
+        let tileDefinition = SKTileDefinition(texture: texture)
+        let tileGroup = SKTileGroup(tileDefinition: tileDefinition)
+        let tileMapNodewithTileGroup = SKTileMapNode(tileSet: tileSet2,
+                                                     columns: 4,
+                                                     rows: 4,
+                                                     tileSize: CGSize(width: 40, height: 40),
+                                                     fillWith: tileGroup)
+        mainScene.addChild(tileMapNodewithTileGroup)
+        
+        /// 1.3  使用提供的具有指定列数和行数的平铺集创建和初始化平铺映射节点。对于网格集类型，
+        /// 节点的总体大小(以点为单位)将为numberOfColumns * tileSize 为 宽 （width) 和 numberofrows * tileSize的高度为高(height)。
+        let tileSet3 = SKTileSet(named: "")!
+        let texture3 = SKTexture(imageNamed: "")
+        let tileDefinition3 = SKTileDefinition(texture: texture3)
+        let tileGroup3 = SKTileGroup(tileDefinition: tileDefinition3)
+        let tileMapNodeWithGrid = SKTileMapNode(tileSet: tileSet3,
+                                                columns: 4,
+                                                rows: 4,
+                                                tileSize: CGSize(width: 40, height: 40),
+                                                tileGroupLayout: [tileGroup3])
+        mainScene.addChild(tileMapNodeWithGrid)
+        /// 1.4 通过允许选择瓷砖来创建瓷砖地图节点(https://developer.apple.com/documentation/spritekit/sktilemapnode/1640698-tilemapnodes)
+        ///
+        // 2. 定义平铺地图的内容
+        ///2.1以编程方式创建切片地图节点时，请指定切片地图是否使用场景编辑器之类的自动映射行为。(https://developer.apple.com/documentation/spritekit/sktilemapnode/1643604-enableautomapping)
+         /// 与通过场景编辑器提前创建拼贴图相比，以编程方式创建拼贴图时可以使用此功能
+        /// 将此值设置true为使用fill(with:)和功能时想要自动映射行为（等同于在场景编辑器中使用画笔）的情况。setTileGroup(_:andTileDefinition:forColumn:row:)
+        /// 2.2 以编程方式创建图块地图节点时，此功能对指定的图块组执行填充操作。(https://developer.apple.com/documentation/spritekit/sktilemapnode/1643615-fill)
+        ///
+        /// 2.3  在指定的图块索引处设置图块组和图块定义。(https://developer.apple.com/documentation/spritekit/sktilemapnode/1690935-settilegroup)
+        ///
+        /// 2.4 将图块组设置为指定的图块索引。(https://developer.apple.com/documentation/spritekit/sktilemapnode/1643605-settilegroup)
+        ///
+    }
+    
+    // MARK: - 展示3D
+    
+    func show3DNode() {
+        // 绘制为展平精灵的3D SceneKit内容。 (https://developer.apple.com/documentation/spritekit/sk3dnode)
+        /// 使用SK3DNode对象将3D SceneKit内容合并到基于SpriteKit的游戏中。当SpriteKit渲染节点时，将对SceneKit场景进行动画处理并首先渲染。然后，将渲染的图像合成到SpriteKit场景中。使用该属性指定要渲染的SceneKit场景。scnScene
+        // 1。 3D节点入门
+        /// 1.1 通过使用3D节点在SpriteKit场景中绘制SceneKit内容。（https://developer.apple.com/documentation/spritekit/sk3dnode/displaying_3d_content_in_a_spritekit_scene）
+        /// SpriteKit中呈现的SceneKit内容会自动分配一个摄影机，并且由于默认为，所以会被分配灯光。
+        /// 这意味着您只需很少的代码即可将简单的3D图元添加到场景中。以下代码显示了如何创建一个包含圆环的简单场景并将其显示在SpriteKit场景中
+        
+        let scene:SCNScene = {
+            let scnScene = SCNScene()
+            let torusGeometry = SCNTorus(ringRadius: 10, pipeRadius: 3)
+            let torusNode = SCNNode(geometry: torusGeometry)
+            torusNode.eulerAngles = SCNVector3(CGFloat.pi / 2, 0, 0)
+            scnScene.rootNode.addChildNode(torusNode)
+            return scnScene
+        }()
+        let node = SK3DNode(viewportSize: CGSize(width: 200, height: 200))
+        node.scnScene = scene
+        mainScene.addChild(node)
+        /// 1.2 初始化新的3D节点。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519708-init)
+        
+        let threeNode = SK3DNode(viewportSize:CGSize(width:100,height:100))
+        
+        /// 1.3 告诉您何时初始化未归档的3D节点。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519722-init)
+        ///
+        // 2. 配置3D节点
+        /// 2.1 节点渲染的图像的大小。(https://developer.apple.com/documentation/spritekit/sk3dnode/1520078-viewportsize)
+        ///
+        /// 2.2 要渲染的SceneKit场景。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519834-scnscene)
+        ///
+        /// 2.3 渲染场景时从中查看场景内容的Scene Kit节点。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519786-pointofview)
+        /// 使用SCNNode将SCNCamera实例分配给其camera属性的对象来查看场景。
+        /// 这个SceneKit节点提供虚拟相机的位置和方向，相机对象提供渲染参数，例如视野和焦点。观察方向沿SceneKit节点的局部坐标空间的负z轴。
+        ///
+        /// 2.4 一个布尔值，该值确定Scene Kit是否自动将灯光添加到场景。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519676-autoenablesdefaultlighting)
+        /// 如果此属性的值为true（默认值），则在渲染不包含光源或仅包含环境光源的场景时，
+        /// SceneKit会自动添加和放置全向光源。如果将值更改为false，则SceneKit用于渲染场景的唯一光源是场景图中包含的光源。
+        ///
+        ///
+        // 3. 在场景工具包中对3D节点的内容进行动画处理
+        /// 3.1 一个布尔值，用于确定场景是否正在播放。(https://developer.apple.com/documentation/spritekit/sk3dnode/1520297-isplaying)
+        ///
+        /// 3.2 一个布尔值，该值确定在场景中的所有动画都播放完之后，Scene Kit是否重新启动场景时间。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519549-loops)
+        /// 如果此属性的值为true（默认值），则在播放与场景关联的所有动画之后，SceneKit将场景时间返回零，从而使这些动画重复。否则，在完成所有动画后，SceneKit将停止播放场景。
+        ///
+        /// 3.3 当前场景时间。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519738-scenetime)
+        /// 此时间戳确定正在运行的动画的行为，类似于视频播放器应用程序中的播放头时间如何确定要显示电影的哪一帧。它仅适用于属性为的动画，包括使用选项从场景源加载的动画。
+        /// 当您要直接控制（或允许用户直接控制）动画的播放时，请将该属性与上述动画选项一起使用。
+        ///
+        // 4. 投射点并执行命中测试
+         /// 4.1 在Scene Kit场景中搜索与渲染图像中的点相对应的对象。(https://developer.apple.com/documentation/spritekit/sk3dnode/1519782-hittest)
+        /// SpriteKit节点的2D视口坐标空间中的点可以引用3D SceneKit坐标空间中沿线段的任何点。命中测试是查找沿此线段定位的场景元素的过程。例如，您可以使用此方法查找与触摸事件对应的几何。
+        ///
+        /// 4.2 将一个点从SceneKit场景的3D世界坐标系投影到SpriteKit节点的2D视口坐标系。 (https://developer.apple.com/documentation/spritekit/sk3dnode/1520400-projectpoint)
+        ///
+        /// 4.3 将SpriteKit节点的2D视口坐标系中的点取消投影到SceneKit场景的3D世界坐标系中。（https://developer.apple.com/documentation/spritekit/sk3dnode/1520024-unprojectpoint）
+        
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E89356FB25484FF100089282 /* 5b4d58fade11d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E89356FA25484FF100089282 /* 5b4d58fade11d.mp4 */; };
 		E898AB162546FEB90050773C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E898AB152546FEB90050773C /* README.md */; };
 		E8D0F1F62544214800BEC927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F52544214800BEC927 /* AppDelegate.swift */; };
 		E8D0F1F82544214800BEC927 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0F1F72544214800BEC927 /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E89356FA25484FF100089282 /* 5b4d58fade11d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5b4d58fade11d.mp4; sourceTree = "<group>"; };
 		E898AB152546FEB90050773C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E8D0F1F22544214800BEC927 /* SpritekitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpritekitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D0F1F52544214800BEC927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E89356F925484FD900089282 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E89356FA25484FF100089282 /* 5b4d58fade11d.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E8D0F1E92544214800BEC927 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		E8D0F1F42544214800BEC927 /* SpritekitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E89356F925484FD900089282 /* Resources */,
 				E8D0F2812545B4EB00BEC927 /* SCN */,
 				E8D0F2672545437F00BEC927 /* SceneNode */,
 				E8D0F2662545437600BEC927 /* VC */,
@@ -315,6 +326,7 @@
 				E8D0F2582545393300BEC927 /* MyParticle05.sks in Resources */,
 				E8D0F2532545391F00BEC927 /* MyParticle04.sks in Resources */,
 				E8D0F25D2545393F00BEC927 /* MyParticle06.sks in Resources */,
+				E89356FB25484FF100089282 /* 5b4d58fade11d.mp4 in Resources */,
 				E8D0F23C254538CE00BEC927 /* MyParticle.sks in Resources */,
 				E8D0F2492545390400BEC927 /* MyParticle02.sks in Resources */,
 				E8D0F2622545394C00BEC927 /* MyParticle07.sks in Resources */,
